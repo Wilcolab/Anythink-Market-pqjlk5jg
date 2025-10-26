@@ -10,8 +10,7 @@ import { uid } from "uid";
 const username = `user${(Math.random() + 1).toString(36).substring(7)}`;
 const email = `${username}@email.com`;
 const password = `pass${(Math.random() + 1).toString(36).substring(7)}`;
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWE2MjAxZjg3MjE1OGMzMTE1YWI0ZSIsInVzZXJuYW1lIjoidXNlcjJ3d3FlIiwiZXhwIjoxNjgxNDg1Mjk3LCJpYXQiOjE2NzYzMDQ4OTd9.Z45FqelGgXLU4q6xkhw_fTHZ5GXoVsx0vI_HoI3ccDo";
+const token =process.env.SIGNUP_TOKEN;
 
 const wrapExpectCreateUser = (page, username, email, password) => {
   return wrapWithRequestId((requestId) => {

@@ -1,3 +1,7 @@
+if (!process.env.SECRET) {
+    throw new Error("SECRET environment variable must be set");
+}
+
 module.exports = {
-  secret: process.env.NODE_ENV === 'production' ? process.env.SECRET : 'e6F9KvSDf4dyXj'
+    secret: process.env.SECRET
 };
